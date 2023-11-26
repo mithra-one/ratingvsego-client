@@ -1,0 +1,168 @@
+@import "../../responsiveMixins.scss";
+
+.profilePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+  .wrapper {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    @include xs {
+      max-width: 260px;
+    }
+    @include sm {
+      max-width: 320px;
+    }
+    @include smd {
+      max-width: 480px;
+    }
+    @include md {
+      max-width: 700px;
+    }
+    @include lg {
+      max-width: 700px;
+    }
+    @include xl {
+      max-width: 1000px;
+    }
+    @include xxl {
+      max-width: 1200px;
+    }
+    @include xxxl {
+      max-width: 1400px;
+    }
+    .pageTitle {
+      font-family: "YanoneKaffeesatz";
+      font-weight: 500;
+      font-size: 30px;
+      color: $light;
+      width: 100%;
+      text-align: center;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      .body {
+        display: flex;
+        column-gap: 15px;
+        .userInfo {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          row-gap: 15px;
+          width: 100%;
+          .inputField {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            label {
+              color: $light;
+              font-size: 18px;
+            }
+            .textInput {
+              width: 100%;
+              padding: 10px 15px;
+              border: 1px solid $regular;
+              background-color: $white;
+              font-family: "YanoneKaffeesatz";
+              font-weight: 500;
+              border-radius: 4px;
+              outline: none;
+              color: $dark;
+              font-size: 26px;
+              &:focus {
+                outline-color: $dark;
+              }
+              &:active {
+                outline-color: $dark;
+              }
+              &::placeholder {
+                font-family: "YanoneKaffeesatz";
+                font-weight: 300;
+                color: $regular;
+                font-size: 26px;
+              }
+            }
+            .formikError {
+              color: $red;
+              font-size: 20px;
+              width: 100%;
+              padding: 3px 6px;
+              text-align: center;
+              background: $light;
+              border: 1px solid $red;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+
+      .submit {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        span {
+          color: $dark;
+          font-weight: 700;
+          font-family: "YanoneKaffeesatz";
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          border: 1px solid $light;
+          transform: scale(1.01);
+          span {
+            color: $light;
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+      .serverError {
+        color: $red;
+        font-size: 20px;
+        width: 100%;
+        padding: 3px 6px;
+        text-align: center;
+        background: $light;
+        border: 1px solid $red;
+        border-radius: 3px;
+      }
+      .updateSuccess {
+        color: $light;
+        font-size: 20px;
+        width: 100%;
+        padding: 3px 6px;
+        text-align: center;
+        background: $dark;
+        border: 1px solid $light;
+        border-radius: 3px;
+      }
+    }
+  }
+}

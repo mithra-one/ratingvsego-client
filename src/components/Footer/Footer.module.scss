@@ -1,0 +1,65 @@
+@import "../../responsiveMixins.scss";
+
+.footer {
+  margin: 0 auto;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  @include xs {
+    max-width: 260px;
+  }
+  @include sm {
+    max-width: 320px;
+  }
+  @include smd {
+    max-width: 480px;
+  }
+  @include md {
+    max-width: 700px;
+  }
+  @include lg {
+    max-width: 700px;
+  }
+  @include xl {
+    max-width: 1000px;
+  }
+  @include xxl {
+    max-width: 1200px;
+  }
+  @include xxxl {
+    max-width: 1400px;
+  }
+  @include landscape {
+    @include mxh600mxw900 {
+      max-width: 700px;
+    }
+    @include mxh400mxw750 {
+      max-width: 600px;
+    }
+    @include mxh400mxw600 {
+      max-width: 700px;
+    }
+  }
+  @include landscape {
+    @include mxh400mxw600 {
+      max-width: 530px;
+    }
+  }
+  .copy {
+    color: $light;
+    font-size: 13px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+    a {
+      text-decoration: underline;
+      color: inherit;
+      text-shadow: 0px 0px 1px rgba(254, 222, 186, 0.5);
+    }
+  }
+}

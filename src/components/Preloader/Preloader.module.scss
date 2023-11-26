@@ -1,0 +1,107 @@
+@import "../../responsiveMixins.scss";
+
+.preloader {
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 100px;
+  opacity: 0.99;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background: #100100;
+  background-image: url(../../assets/imgs/ratingBG.jpg);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: top;
+  position: relative;
+  &::before {
+    backdrop-filter: blur(5px);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .logo {
+    animation: light 4s infinite;
+    filter: drop-shadow(100px -20px 120px #fedebaec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 55px;
+    &:hover {
+      cursor: default;
+    }
+    svg {
+      transform: scale(2.8);
+      filter: drop-shadow(-4px 4px 2px rgba(0, 0, 0, 0.98));
+      animation: shadow 4s infinite;
+      @include xs {
+        transform: scale(1.35);
+      }
+      @include sm {
+        transform: scale(1.5);
+      }
+      @include smd {
+        transform: scale(1.8);
+      }
+      @include md {
+        transform: scale(2);
+      }
+      @include lg {
+        transform: scale(2.8);
+      }
+      @include xl {
+        transform: scale(2.8);
+      }
+      @include xxl {
+        transform: scale(2.8);
+      }
+      @include xxxl {
+        transform: scale(2.8);
+      }
+      @include landscape {
+        @include mxh400mxw600 {
+          transform: scale(2.8);
+        }
+      }
+      @include landscape {
+        @include mxh400mxw600 {
+          max-width: 700px;
+        }
+      }
+    }
+  }
+}
+@keyframes light {
+  10% {
+    filter: drop-shadow(100px -20px 120px #fedebaec);
+  }
+  40% {
+    filter: drop-shadow(-100px 20px 120px #fedebaec);
+  }
+  80% {
+    filter: drop-shadow(100px 20px 120px #fedebaec);
+  }
+}
+@keyframes shadow {
+  10% {
+    filter: drop-shadow(-4px 4px 2px rgba(0, 0, 0, 0.98));
+  }
+  40% {
+    filter: drop-shadow(4px -4px 2px rgba(0, 0, 0, 0.98));
+  }
+  80% {
+    filter: drop-shadow(-4px -4px 2px rgba(0, 0, 0, 0.98));
+  }
+}

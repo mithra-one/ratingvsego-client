@@ -1,0 +1,381 @@
+@import "../../responsiveMixins.scss";
+
+// .resp {
+//   width: 100px;
+//   height: 100px;
+//   @include xs {
+//     background: #e3e8ea;
+//   }
+//   @include sm {
+//     background: #bccad0;
+//   }
+//   @include smd {
+//     background: #9ba8ae;
+//   }
+//   @include md {
+//     background: #707a7e;
+//   }
+//   @include lg {
+//     background: #495054;
+//   }
+//   @include xl {
+//     background: blue;
+//   }
+//   @include xxl {
+//     background: green;
+//   }
+//   @include xxxl {
+//     background: red;
+//   }
+// }
+
+.loadingEvents {
+  position: absolute;
+  left: calc(50% - 100px);
+  opacity: 0.2;
+  @include xs {
+    left: calc(50% - 70px);
+  }
+  @include sm {
+    left: calc(50% - 75px);
+  }
+  @include smd {
+    left: calc(50% - 90px);
+  }
+  span {
+    position: relative;
+    color: $dark;
+    text-align: center;
+    font-size: 26px;
+    &:before {
+      content: attr(data-text);
+      position: absolute;
+      overflow: hidden;
+      max-width: 100%;
+      white-space: nowrap;
+      color: $light;
+      animation: loading 3s infinite;
+    }
+    @include xs {
+      font-size: 20px;
+    }
+    @include sm {
+      font-size: 22px;
+    }
+    @include smd {
+      font-size: 24px;
+    }
+  }
+
+  @keyframes loading {
+    0% {
+      max-width: 0;
+    }
+  }
+}
+
+.events {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+  cursor: default;
+  @include xs {
+    max-width: 260px;
+    row-gap: 15px;
+  }
+  @include sm {
+    max-width: 320px;
+    row-gap: 20px;
+  }
+  @include smd {
+    max-width: 480px;
+    row-gap: 25px;
+  }
+  @include md {
+    max-width: 700px;
+    row-gap: 30px;
+  }
+  @include lg {
+    max-width: 700px;
+  }
+  @include xl {
+    max-width: 1000px;
+  }
+  @include xxl {
+    max-width: 1200px;
+  }
+  @include xxxl {
+    max-width: 1400px;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+    font-family: "YanoneKaffeesatz";
+    font-weight: 300;
+    font-size: 34px;
+    color: $light;
+    text-transform: uppercase;
+    @include xs {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+    @include smd {
+      font-size: 26px;
+    }
+    @include md {
+      font-size: 28px;
+    }
+  }
+  .eventList {
+    width: 100%;
+    border: 1px solid $light;
+    border-radius: 7px;
+    @include xs {
+      max-width: 260px;
+    }
+    @include sm {
+      max-width: 320px;
+    }
+    @include smd {
+      max-width: 480px;
+    }
+    @include md {
+      max-width: 700px;
+    }
+    @include lg {
+      max-width: 700px;
+    }
+    @include xl {
+      max-width: 1000px;
+    }
+    @include xxl {
+      max-width: 1200px;
+    }
+    @include xxxl {
+      max-width: 1400px;
+    }
+    &:hover {
+    }
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: rgba(254, 222, 186, 0.2);
+      @include xs {
+        column-gap: 5px;
+      }
+      @include sm {
+        column-gap: 5px;
+      }
+      @include smd {
+        column-gap: 7px;
+      }
+      @include md {
+        column-gap: 10px;
+      }
+      @include lg {
+        column-gap: 10px;
+      }
+      span {
+        font-family: "YanoneKaffeesatz";
+        font-weight: 300;
+        font-size: 20px;
+        color: $light;
+        @include xs {
+          font-size: 11px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+        @include smd {
+          font-size: 14px;
+        }
+        @include md {
+          font-size: 18px;
+        }
+      }
+
+      .info {
+        padding: 10px 0 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 30px;
+        flex: 1;
+        @include xs {
+          padding: 5px 0 5px 5px;
+          column-gap: 5px;
+        }
+        @include sm {
+          padding: 5px 0 5px 5px;
+          column-gap: 5px;
+        }
+        @include smd {
+          padding: 5px 0 5px 5px;
+          column-gap: 7px;
+        }
+        @include md {
+          padding: 7px 0 7px 7px;
+          column-gap: 10px;
+        }
+        @include lg {
+          padding: 7px 0 7px 7px;
+          column-gap: 10px;
+        }
+        .date {
+          text-align: left;
+          width: 85px;
+          @include xs {
+            max-width: 30px;
+            width: 17%;
+          }
+          @include sm {
+            width: 30px;
+          }
+          @include smd {
+            width: 40px;
+          }
+          @include md {
+            width: 60px;
+          }
+          @include lg {
+            width: 60px;
+          }
+        }
+        .time {
+          text-align: left;
+          width: 45px;
+          @include xs {
+            max-width: 24px;
+            width: 13%;
+          }
+          @include sm {
+            width: 25px;
+          }
+          @include smd {
+            width: 30px;
+          }
+          @include md {
+            width: 40px;
+          }
+          @include md {
+            width: 40px;
+          }
+        }
+        .place {
+          text-align: left;
+          width: 320px;
+          @include xs {
+            width: 27%;
+            max-width: 50px;
+          }
+          @include sm {
+            width: 70px;
+          }
+          @include smd {
+            width: 100px;
+          }
+          @include md {
+            width: 150px;
+          }
+          @include lg {
+            width: 150px;
+          }
+          @include xl {
+            max-width: 230px;
+          }
+        }
+        .cast {
+          text-align: left;
+          width: 450px;
+          @include xs {
+            width: 35%;
+          }
+          @include sm {
+            width: 90px;
+          }
+          @include smd {
+            width: 170px;
+          }
+          @include md {
+            width: 275px;
+          }
+          @include lg {
+            width: 250px;
+          }
+          @include xl {
+            max-width: 320px;
+          }
+        }
+      }
+      .record {
+        min-width: 35px;
+        @include xs {
+          min-width: 7%;
+          max-width: 7%;
+        }
+        @include sm {
+          min-width: 25px;
+          width: 25px;
+        }
+        @include smd {
+          min-width: 30px;
+          width: 30px;
+        }
+        @include md {
+          min-width: 30px;
+          width: 30px;
+        }
+        @include lg {
+          min-width: 30px;
+          width: 30px;
+        }
+      }
+      .tickets {
+        width: 120px;
+        text-align: center;
+        @include xs {
+          width: 21%;
+          padding-right: 7px;
+        }
+        @include sm {
+          width: 60px;
+          padding-right: 6px;
+        }
+        @include smd {
+          width: 80px;
+          padding-right: 5px;
+        }
+        @include md {
+          width: 85px;
+          padding-right: 7px;
+        }
+        @include lg {
+          width: 100px;
+          padding-right: 7px;
+        }
+      }
+    }
+    .body {
+      border-radius: 0 0 7px 7px;
+    }
+  }
+}
+
+.serverError {
+  color: $red;
+  font-size: 20px;
+  width: 100%;
+  padding: 3px 6px;
+  text-align: center;
+  background: $light;
+  border: 1px solid $red;
+  border-radius: 3px;
+}

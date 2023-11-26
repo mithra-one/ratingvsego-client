@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Rozovii Chulok";
+  src: url("../src/assets/fonts/Rozovii-Chulok.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Santa Catarina";
+  src: url("../src/assets/fonts/Santa-Catarina.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spectral";
+  src: url("../src/assets/fonts/Spectral-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spectral";
+  src: url("../src/assets/fonts/Spectral-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("../src/assets/fonts/YanoneKaffeesatz-ExtraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("../src/assets/fonts/YanoneKaffeesatz-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "YanoneKaffeesatz", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #100100;
+  background-image: url(./assets/imgs/ratingBG.jpg);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: top;
+  position: relative;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+body::before {
+  backdrop-filter: blur(5px);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+/* SCROLLBAR */
+
+*::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+*::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+@media (max-width: 480px) {
+  *::-webkit-scrollbar:vertical {
+    width: 4px;
+  }
+  *::-webkit-scrollbar:horizontal {
+    height: 4px;
+  }
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  border: 1px solid #513427;
+  background-color: #fedeba;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #513427;
+  border-radius: 6px;
+}
+
+/* DATEPICKER */
+
+.react-datepicker__header {
+  background-color: #fedeba !important;
+}
+
+.react-datepicker__current-month {
+  color: #100100 !important;
+}
+
+.react-datepicker__header--time {
+  @media (min-width: 0px) and (max-width: 320px) {
+    height: 53px !important;
+  }
+}
+.react-datepicker__time-container,
+.react-datepicker__time-box {
+  @media (min-width: 321px) and (max-width: 480px) {
+    width: 78px !important;
+  }
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: #100100 !important;
+}
+.react-datepicker__day,
+.react-datepicker__day-name {
+  @media (min-width: 0px) and (max-width: 320px) {
+    margin: 0 !important;
+  }
+}
+
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item--selected {
+  background-color: #100100 !important;
+  color: #fedeba !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #100100 !important;
+  color: #fedeba !important;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__month-text:hover,
+.react-datepicker__quarter-text:hover {
+  background-color: #100100 !important;
+  color: #fedeba !important;
+}
+
+.react-datepicker__navigation--previous {
+  border-right-color: #100100 !important;
+}
+
+.react-datepicker__navigation--next {
+  border-left-color: #100100 !important;
+}
+
+.react-datepicker__day--today {
+  background-color: #fedeba !important;
+  color: #100100 !important;
+  text-decoration: underline !important;
+}
+
+.react-datepicker__day--today.react-datepicker__day--selected {
+  color: #fedeba !important;
+}
+
+.react-datepicker__header--time {
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

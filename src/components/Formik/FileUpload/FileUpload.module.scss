@@ -1,0 +1,679 @@
+@import "../../../responsiveMixins.scss";
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  @include xs {
+    row-gap: 10px;
+  }
+  @include sm {
+    row-gap: 10px;
+  }
+  @include xs {
+    row-gap: 10px;
+  }
+  @include landscape {
+    @include mxh600mxw900 {
+      row-gap: 10px;
+    }
+    @include mxh600mxw750 {
+      row-gap: 10px;
+    }
+    @include mxh400mxw750 {
+      row-gap: 10px;
+    }
+    @include mxh400mxw600 {
+      row-gap: 10px;
+    }
+  }
+  .cropContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include xs {
+      min-height: 50svh;
+    }
+    @include sm {
+      min-height: 55svh;
+    }
+    @include smd {
+      min-height: 55vh;
+    }
+  }
+  .finalImage {
+    // width: auto;
+    // height: 85%;
+    // margin: auto;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    @include xs {
+      max-width: 100%;
+    }
+    @include sm {
+      max-width: 100%;
+    }
+    @include smd {
+      max-width: 100%;
+    }
+    @include md {
+      max-width: 100%;
+    }
+    @include lg {
+      max-width: 100%;
+    }
+    @include xl {
+      max-width: 950px;
+    }
+    @include xxl {
+      max-width: 1150px;
+    }
+    @include xxxl {
+      max-width: 1350px;
+    }
+    @include landscape {
+      @include mxh600mxw900 {
+        max-height: 100%;
+        width: auto;
+      }
+      @include mxh400mxw750 {
+        max-height: 100%;
+        width: auto;
+      }
+      @include mxh400mxw600 {
+        max-height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+    width: 500px;
+    @include xs {
+      max-width: 240px;
+    }
+    @include sm {
+      max-width: 260px;
+    }
+    @include smd {
+      max-width: 500px;
+    }
+    @include md {
+      max-width: 650px;
+    }
+    @include lg {
+      max-width: 850px;
+    }
+    @include xl {
+      max-width: 950px;
+    }
+    @include xxl {
+      max-width: 1150px;
+    }
+    @include xxxl {
+      max-width: 1350px;
+    }
+    @include landscape {
+      @include mxh600mxw900 {
+        max-width: 650px;
+      }
+      @include mxh400mxw750 {
+        max-width: 480px;
+      }
+      @include mxh400mxw600 {
+        max-width: 480px;
+      }
+    }
+    .uploadError {
+      color: $red;
+      font-size: 20px;
+      width: 100%;
+      padding: 3px 6px;
+      text-align: center;
+      background: $light;
+      border: 1px solid $red;
+      border-radius: 3px;
+    }
+    .cropImage {
+      position: relative;
+      min-width: 450px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: flex-start;
+      @include xs {
+        min-width: unset;
+        max-width: 240px;
+        width: 100%;
+        row-gap: 5px;
+        margin: 0 auto;
+      }
+      @include sm {
+        min-width: unset;
+        max-width: 260px;
+        width: 100%;
+        row-gap: 5px;
+        margin: 0 auto;
+      }
+      @include smd {
+        min-width: unset;
+        max-width: 500px;
+        width: 100%;
+        row-gap: 10px;
+        margin: 0 auto;
+      }
+      @include md {
+        min-width: unset;
+        max-width: 650px;
+        width: 100%;
+        row-gap: 35px;
+        margin: 0 auto;
+      }
+      @include lg {
+        min-width: unset;
+        max-width: 850px;
+        width: 100%;
+        row-gap: 40px;
+        margin: 0 auto;
+      }
+      @include landscape {
+        @include mxh600mxw900 {
+          min-width: unset;
+          max-width: 650px;
+          width: 100%;
+          row-gap: 5px;
+          margin: 0 auto;
+        }
+        @include mxh400mxw750 {
+          min-width: unset;
+          max-width: 480px;
+          width: 100%;
+          row-gap: 5px;
+          margin: 0 auto;
+        }
+        @include mxh400mxw600 {
+          min-width: unset;
+          max-width: 480px;
+          width: 100%;
+          row-gap: 5px;
+          margin: 0 auto;
+        }
+      }
+      .sliderContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        @include xs {
+          flex-direction: column;
+          row-gap: 10px;
+        }
+        @include sm {
+          flex-direction: column;
+          row-gap: 10px;
+        }
+        @include smd {
+          flex-direction: column;
+          row-gap: 10px;
+        }
+
+        @include landscape {
+          @include mxh600mxw900 {
+            flex-direction: row;
+          }
+          @include mxh600mxw750 {
+            flex-direction: row;
+          }
+          @include mxh400mxw750 {
+            flex-direction: row;
+          }
+          @include mxh400mxw600 {
+            flex-direction: row;
+          }
+        }
+        input {
+          flex: 1;
+        }
+        span {
+          text-align: center;
+          font-size: 22px;
+          font-family: "YanoneKaffeesatz";
+          color: $light;
+        }
+        span.title {
+          width: 85px;
+          font-weight: 300;
+        }
+        span.value {
+          width: 40px;
+          font-weight: 700;
+        }
+
+        .zoomRange,
+        .rotateRange {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          height: 0px;
+          border-top: 5px solid $regular;
+          border-bottom: 5px solid $light;
+          border-radius: 50px;
+          background: $dark;
+          width: 100%;
+          @include xs {
+            border-top: 1px solid $regular;
+            border-bottom: 1px solid $light;
+          }
+          @include sm {
+            border-top: 1px solid $regular;
+            border-bottom: 1px solid $light;
+          }
+          @include smd {
+            border-top: 1px solid $regular;
+            border-bottom: 1px solid $light;
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+          }
+          &:focus {
+            outline: none;
+            &::-ms-fill-lower {
+              box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.94);
+            }
+            &::-ms-fill-upper {
+              box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.4);
+            }
+            &::-moz-range-progress {
+              box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.94);
+            }
+            &::-moz-range-track {
+              box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.4);
+            }
+          }
+          &::-ms-track {
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+          }
+          &::-webkit-slider-runnable-track {
+            height: 8px;
+            cursor: pointer;
+            background-color: $light;
+            border-radius: 50px;
+          }
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 13px;
+            width: 13px;
+            margin-top: -3px;
+            background-color: $dark;
+            box-shadow: 0 0 0 6px #fedeba65;
+            border-radius: 10px;
+            cursor: pointer;
+            will-change: contents;
+            transition: all 0.2s ease;
+            &:hover {
+              box-shadow: 0 0 0 8px #fedeba80;
+            }
+          }
+          &::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background-color: $light;
+            border-radius: 50px;
+          }
+          &::-moz-range-thumb {
+            -webkit-appearance: none;
+            height: 13px;
+            width: 13px;
+            margin-top: -3px;
+            background-color: $dark;
+            box-shadow: 0 0 0 6px #fedeba65;
+            border-radius: 10px;
+            cursor: pointer;
+            will-change: contents;
+            transition: all 0.2s ease;
+            &:hover {
+              box-shadow: 0 0 0 8px #fedeba80;
+            }
+          }
+          &::-ms-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: #fff;
+          }
+          &::-ms-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background: #ffffff;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: 0px;
+          }
+        }
+      }
+
+      .cropButton {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "YanoneKaffeesatz";
+        font-weight: 700;
+        background: $light;
+        border-radius: 4px;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        span {
+          color: $dark;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 22px;
+        }
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          span {
+            color: $light;
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+    .resetUpload {
+      position: relative;
+      min-width: 450px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      align-items: flex-start;
+      @include xs {
+        min-width: unset;
+        max-width: 240px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      @include sm {
+        min-width: unset;
+        max-width: 260px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      @include smd {
+        min-width: unset;
+        max-width: 500px;
+        width: 100%;
+        row-gap: 35px;
+        margin: 0 auto;
+      }
+      @include md {
+        min-width: unset;
+        max-width: 650px;
+        width: 100%;
+        row-gap: 35px;
+        margin: 0 auto;
+      }
+      @include lg {
+        min-width: unset;
+        width: 100%;
+        row-gap: 50px;
+        margin: 0 auto;
+      }
+      @include landscape {
+        @include mxh600mxw900 {
+          min-width: unset;
+          max-width: 650px;
+          width: 100%;
+          row-gap: 5px;
+          margin: 0 auto;
+        }
+        @include mxh400mxw750 {
+          min-width: unset;
+          max-width: 480px;
+          width: 100%;
+          row-gap: 5px;
+          margin: 0 auto;
+        }
+        @include mxh400mxw600 {
+          min-width: unset;
+          max-width: 480px;
+          width: 100%;
+          row-gap: 5px;
+          margin: 0 auto;
+        }
+      }
+      .clearImage {
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        font-family: "YanoneKaffeesatz";
+        font-weight: 700;
+        background: $light;
+        border-radius: 4px;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          span {
+            color: $light;
+          }
+          svg {
+            path {
+              fill: $light;
+            }
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+        span {
+          color: $dark;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 22px;
+        }
+        svg {
+          height: 18px;
+          width: auto;
+          path {
+            fill: $dark;
+          }
+        }
+      }
+      .uploadImage {
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        font-family: "YanoneKaffeesatz";
+        font-weight: 700;
+        background: $light;
+        border-radius: 4px;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          span {
+            color: $light;
+          }
+          svg {
+            path {
+              fill: $light;
+            }
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+        span {
+          color: $dark;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 22px;
+        }
+        svg {
+          height: 18px;
+          width: auto;
+          path {
+            fill: $dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 100%;
+  label {
+    color: $light;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center center;
+  }
+  .formikError {
+    color: $red;
+    font-size: 20px;
+    width: 100%;
+    padding: 3px 6px;
+    text-align: center;
+    background: $light;
+    border: 1px solid $red;
+    border-radius: 3px;
+  }
+  .uploadArea {
+    width: 100%;
+    // min-height: 450px;
+    display: flex;
+    border: 0.14rem dashed $regular;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: $regular;
+    background-color: $white;
+    // @include xs {
+    //   min-height: 150px;
+    // }
+    // @include sm {
+    //   min-height: 150px;
+    // }
+    // @include smd {
+    //   min-height: 150px;
+    // }
+    // @include md {
+    //   min-height: 200px;
+    // }
+    // @include lg {
+    //   min-height: 200px;
+    // }
+    .label {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      row-gap: 10px;
+      cursor: pointer;
+      .finalImage {
+        width: 100%;
+        height: auto;
+      }
+      .uploadIcon {
+        width: 30%;
+        height: auto;
+      }
+      span {
+        font-size: 13px;
+        font-weight: 300;
+        color: $dark;
+      }
+
+      .uploadIcon {
+        height: 23px;
+        width: auto;
+        path {
+          fill: $dark;
+        }
+      }
+    }
+
+    .deleteIcon {
+      right: 4px;
+      top: 4px;
+      padding: 5px;
+      height: 46px;
+      width: auto;
+      position: absolute;
+      cursor: pointer;
+      filter: drop-shadow(0px 1px 2px rgba(103, 0, 0, 0.75));
+      transition: all 0.33s cubic-bezier(0.39, 0.575, 0.565, 1);
+      &:hover {
+        transform: scale(1.15);
+        path {
+          fill: $red;
+        }
+      }
+      path {
+        fill: $white;
+        transition: all 0.33s cubic-bezier(0.39, 0.575, 0.565, 1);
+      }
+    }
+  }
+  .fileInput {
+    display: none;
+  }
+}

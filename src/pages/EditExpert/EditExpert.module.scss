@@ -1,0 +1,141 @@
+@import "../../responsiveMixins.scss";
+
+.editExpert {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+  .wrapper {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    @include xs {
+      max-width: 260px;
+    }
+    @include sm {
+      max-width: 320px;
+    }
+    @include smd {
+      max-width: 480px;
+    }
+    @include md {
+      max-width: 700px;
+    }
+    @include lg {
+      max-width: 700px;
+    }
+    @include xl {
+      max-width: 1000px;
+    }
+    @include xxl {
+      max-width: 1200px;
+    }
+    @include xxxl {
+      max-width: 1400px;
+    }
+    .pageTitle {
+      font-family: "YanoneKaffeesatz";
+      font-weight: 500;
+      font-size: 30px;
+      color: $light;
+      width: 100%;
+      text-align: center;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      .body {
+        display: flex;
+        column-gap: 15px;
+        @include xs {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        @include sm {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        .attachment {
+          display: flex;
+          align-items: flex-start;
+          column-gap: 15px;
+          @include xs {
+            justify-content: center;
+          }
+          @include sm {
+            justify-content: center;
+          }
+          .avatar {
+            width: 133px;
+          }
+        }
+        .expertInfo {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          row-gap: 15px;
+          width: 100%;
+          .name,
+          .link {
+            width: 100%;
+          }
+        }
+      }
+
+      .submit {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        span {
+          color: $dark;
+          font-weight: 700;
+          font-family: "YanoneKaffeesatz";
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          border: 1px solid $light;
+          transform: scale(1.01);
+          span {
+            color: $light;
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      .serverError {
+        color: $red;
+        font-size: 20px;
+        width: 100%;
+        padding: 3px 6px;
+        text-align: center;
+        background: $light;
+        border: 1px solid $red;
+        border-radius: 3px;
+      }
+    }
+  }
+}

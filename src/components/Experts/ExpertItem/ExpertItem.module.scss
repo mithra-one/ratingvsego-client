@@ -1,0 +1,289 @@
+@import "../../../responsiveMixins.scss";
+
+.expert {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  &:hover {
+    transform: scale(1.15) rotateY(180deg);
+    .body {
+      filter: drop-shadow(0px 1px 10px rgba(254, 222, 186, 0.15));
+      .photo {
+        .image {
+          transform: rotateY(-180deg);
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .name {
+        transform: rotateY(-180deg);
+        background-color: $regular;
+        border: 1px solid $light;
+      }
+    }
+    .control {
+      transform: rotateY(-180deg);
+
+      .editBtn {
+        background: rgba(254, 222, 186, 0.6);
+        box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+        -webkit-box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+        -moz-box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+        svg {
+          path {
+            fill: $dark;
+          }
+        }
+      }
+      .deleteBtn {
+        background: rgba(230, 57, 70, 0.6);
+        box-shadow: 0px 0px 20px -4px rgba(230, 57, 70, 0.4);
+        -webkit-box-shadow: 0px 0px 20px -4px rgba(230, 57, 70, 0.4);
+        -moz-box-shadow: 0px 0px 20px -4px rgba(230, 57, 70, 0.4);
+        svg {
+          path {
+            fill: $light;
+          }
+        }
+      }
+    }
+  }
+  .body {
+    text-decoration: none;
+    transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    .photo {
+      z-index: 4;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      @include xs {
+        width: 65px;
+        height: 65px;
+      }
+      @include sm {
+        width: 65px;
+        height: 65px;
+      }
+      @include smd {
+        width: 75px;
+        height: 75px;
+      }
+      @include md {
+        width: 90px;
+        height: 90px;
+      }
+      margin: 0 auto;
+      .image {
+        z-index: 4;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        position: relative;
+        border: 1px solid $regular;
+        background-position: center center;
+        background-size: cover;
+        &::before {
+          border-radius: 100px;
+          background-color: rgba(16, 1, 0, 0.35);
+          @include xs {
+            background-color: rgba(16, 1, 0, 0.2);
+          }
+          @include sm {
+            background-color: rgba(16, 1, 0, 0.2);
+          }
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+    }
+    .name {
+      z-index: 5;
+      position: relative;
+      margin: -15px auto 0;
+      // height: 35px;
+      width: 100px;
+      padding: 3px 7px;
+      background-color: $dark;
+      transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+      border-radius: 4px;
+      border: 1px solid $regular;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include xs {
+        width: 65px;
+      }
+      @include sm {
+        width: 65px;
+      }
+      @include smd {
+        width: 75px;
+      }
+      @include md {
+        width: 90px;
+      }
+      span {
+        font-size: 20px;
+        line-height: 22px;
+        color: $light;
+        text-align: center;
+        font-weight: 300;
+        @include xs {
+          font-size: 10px;
+          line-height: 10px;
+        }
+        @include sm {
+          font-size: 12px;
+          line-height: 12px;
+        }
+        @include smd {
+          font-size: 14px;
+          line-height: 14px;
+        }
+        @include md {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    right: 0px;
+    bottom: 51px;
+    position: absolute;
+    z-index: 999;
+    @include xs {
+      bottom: 27px;
+    }
+    @include sm {
+      bottom: 27px;
+    }
+    @include smd {
+      bottom: 35px;
+    }
+    @include md {
+      bottom: 39px;
+    }
+    .adminBtn {
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+      text-decoration: none;
+      color: $light;
+      border-radius: 4px;
+      border: none;
+      border: 1px solid rgba(254, 222, 186, 0.3);
+      background: rgba(254, 222, 186, 0.37);
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+      @include xs {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+      }
+      @include sm {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+      }
+      @include smd {
+        width: 24px;
+        height: 24px;
+        padding: 3px;
+      }
+      @include md {
+        width: 28px;
+        height: 28px;
+        padding: 3px;
+      }
+      &:disabled {
+        cursor: not-allowed;
+        background: rgba(255, 255, 255, 0.05);
+        &:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+      }
+      &:active {
+        transform: scale(0.98);
+        border: 0.5px solid $light;
+      }
+      svg {
+        height: 22px;
+        width: auto;
+        transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+        @include xs {
+          height: 12px;
+        }
+        @include sm {
+          height: 12px;
+        }
+        @include smd {
+          height: 15px;
+        }
+        @include md {
+          height: 20px;
+        }
+        path {
+          transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+      }
+    }
+    .editBtn {
+      border: 1px solid rgba(254, 222, 186, 0.3);
+      &:hover {
+        background: rgba(254, 222, 186, 0.9);
+        box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+        -webkit-box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+        -moz-box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+        svg {
+          path {
+            fill: $dark;
+          }
+        }
+      }
+      svg {
+        path {
+          fill: $light;
+        }
+      }
+    }
+    .deleteBtn {
+      border: 1px solid rgba(230, 57, 70, 0.3);
+      &:hover {
+        background: rgba(230, 57, 70, 0.9);
+        box-shadow: 0px 0px 20px -4px rgba(230, 57, 70, 0.4);
+        -webkit-box-shadow: 0px 0px 20px -4px rgba(230, 57, 70, 0.4);
+        -moz-box-shadow: 0px 0px 20px -4px rgba(230, 57, 70, 0.4);
+        svg {
+          path {
+            fill: $light;
+          }
+        }
+      }
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
+}

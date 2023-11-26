@@ -1,0 +1,311 @@
+@import "../../responsiveMixins.scss";
+
+.pageWrapper {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(254, 222, 186, 0.3) 0%,
+    rgba(254, 222, 186, 0.2) 20.83%,
+    rgba(254, 222, 186, 0.15) 39.06%,
+    rgba(254, 222, 186, 0) 100%
+  );
+  display: flex;
+  .pageContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 0;
+    position: relative;
+    @include xs {
+      max-width: 260px;
+    }
+    @include sm {
+      max-width: 320px;
+    }
+    @include smd {
+      max-width: 480px;
+    }
+    @include md {
+      max-width: 700px;
+    }
+    @include lg {
+      max-width: 700px;
+    }
+    @include xl {
+      max-width: 1000px;
+    }
+    @include xxl {
+      max-width: 1200px;
+    }
+    @include xxxl {
+      max-width: 1400px;
+    }
+    .page404 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 100px;
+      @include xs {
+        row-gap: 150px;
+      }
+      @include sm {
+        row-gap: 170px;
+      }
+      @include md {
+        row-gap: 200px;
+      }
+      @include lg {
+        row-gap: 180px;
+      }
+      @include xxl {
+        row-gap: 120px;
+      }
+      @include xxxl {
+        row-gap: 230px;
+      }
+      @include landscape {
+        @include mxh400mxw900 {
+          row-gap: 90px;
+        }
+        @include mxh400mxw600 {
+          row-gap: 60px;
+        }
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 90px;
+        &:hover {
+          cursor: default;
+        }
+        .rating {
+          font-family: "Santa Catarina";
+          font-size: 162px;
+          line-height: 162px;
+          color: $light;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+          text-transform: uppercase;
+          @include xs {
+            font-size: 100px;
+            line-height: 100px;
+          }
+          @include sm {
+            font-size: 110px;
+            line-height: 110px;
+          }
+          @include smd {
+            font-size: 130px;
+            line-height: 130px;
+          }
+          @include md {
+            font-size: 140px;
+            line-height: 140px;
+          }
+          @include lg {
+            font-size: 150px;
+            line-height: 162px;
+          }
+          @include xxl {
+            font-size: 130px;
+            line-height: 130px;
+          }
+          @include xxxl {
+            font-size: 200px;
+            line-height: 200px;
+          }
+          @include landscape {
+            @include mxh600mxw900 {
+              font-size: 110px;
+              line-height: 110px;
+            }
+            @include mxh400mxw900 {
+              font-size: 80px;
+              line-height: 80px;
+            }
+            @include mxh400mxw600 {
+              font-size: 75px;
+              line-height: 75px;
+            }
+          }
+        }
+        .vsego {
+          transform: rotate(-4deg);
+          position: absolute;
+          bottom: -65px;
+          font-family: "Rozovii Chulok";
+          font-size: 85px;
+          line-height: 85px;
+          color: $light;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+          @include xs {
+            bottom: -35px;
+            font-size: 55px;
+            line-height: 55px;
+          }
+          @include sm {
+            bottom: -45px;
+            font-size: 60px;
+            line-height: 60px;
+          }
+          @include smd {
+            bottom: -40px;
+            font-size: 65px;
+            line-height: 65px;
+          }
+          @include md {
+            bottom: -50px;
+            font-size: 75px;
+            line-height: 75px;
+          }
+          @include lg {
+            bottom: -50px;
+            font-size: 85px;
+            line-height: 85px;
+          }
+          @include xxl {
+            bottom: -50px;
+            font-size: 70px;
+            line-height: 70px;
+          }
+          @include xxxl {
+            bottom: -75px;
+            font-size: 110px;
+            line-height: 110px;
+          }
+          @include landscape {
+            @include mxh600mxw900 {
+              bottom: -35px;
+              font-size: 55px;
+              line-height: 55px;
+            }
+            @include mxh400mxw900 {
+              bottom: -35px;
+              font-size: 45px;
+              line-height: 45px;
+            }
+            @include mxh400mxw750 {
+              bottom: -30px;
+              font-size: 40px;
+              line-height: 40px;
+            }
+            @include mxh400mxw600 {
+              bottom: -30px;
+              font-size: 40px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+      .button {
+        position: absolute;
+        bottom: 15%;
+        text-decoration: none;
+        width: 260px;
+        border: none;
+        outline: none;
+        padding: 12px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "YanoneKaffeesatz";
+        background-color: $light;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        @include xs {
+          font-size: 18px;
+          line-height: 18px;
+          width: 260px;
+        }
+        @include sm {
+          font-size: 20px;
+          line-height: 20px;
+          width: 320px;
+        }
+        @include smd {
+          font-size: 18px;
+          line-height: 18px;
+          width: 260px;
+        }
+        @include md {
+          font-size: 20px;
+          line-height: 20px;
+          width: 310px;
+        }
+        @include lg {
+          font-size: 20px;
+          line-height: 20px;
+          width: 330px;
+        }
+        @include xxl {
+          font-size: 18px;
+          line-height: 18px;
+          width: 373px;
+        }
+        @include xxxl {
+          font-size: 20px;
+          line-height: 20px;
+          width: 450px;
+        }
+        @include landscape {
+          @include mxh600mxw900 {
+            font-size: 18px;
+            line-height: 18px;
+            padding: 6px 12px;
+            width: 220px;
+          }
+          @include mxh400mxw900 {
+            font-size: 18px;
+            line-height: 18px;
+            padding: 6px 12px;
+            width: 220px;
+          }
+          @include mxh400mxw750 {
+            font-size: 18px;
+            line-height: 18px;
+            padding: 6px 12px;
+            width: 220px;
+          }
+          @include mxh400mxw600 {
+            font-size: 18px;
+            line-height: 18px;
+            padding: 6px 12px;
+            width: 220px;
+          }
+        }
+        span {
+          color: $dark;
+          text-transform: uppercase;
+        }
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          border: 1px solid $light;
+          span {
+            color: $light;
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}

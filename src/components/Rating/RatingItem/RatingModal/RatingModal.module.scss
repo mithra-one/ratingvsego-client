@@ -1,0 +1,340 @@
+@import "../../../../responsiveMixins.scss";
+
+.modalContent {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(254, 222, 186, 0.35) 0%,
+    rgba(254, 222, 186, 0.25) 20.83%,
+    rgba(254, 222, 186, 0.15) 39.06%,
+    rgba(254, 222, 186, 0) 100%
+  );
+  cursor: default;
+  .cardWrapper {
+    width: 100%;
+    height: 100%;
+    .card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 20px;
+        width: 100%;
+        // height: 62%;
+        &:hover {
+          cursor: default;
+        }
+
+        .verdict {
+          font-size: 30px;
+          line-height: 30px;
+          font-family: "YanoneKaffeesatz";
+          font-weight: 300;
+          color: $light;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.65);
+          @include xs {
+            font-size: 18px;
+            line-height: 18px;
+          }
+          @include sm {
+            font-size: 18px;
+            line-height: 18px;
+          }
+          @include smd {
+            font-size: 20px;
+            line-height: 20px;
+          }
+          @include md {
+            font-size: 24px;
+            line-height: 24px;
+          }
+          @include landscape {
+            @include mxh600mxw900 {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+        .title {
+          font-size: 80px;
+          font-family: "YanoneKaffeesatz";
+          font-weight: 500;
+          text-align: center;
+          color: $light;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.65);
+          @include xs {
+            font-size: 30px;
+          }
+          @include sm {
+            font-size: 30px;
+          }
+          @include smd {
+            font-size: 45px;
+          }
+          @include md {
+            font-size: 60px;
+          }
+          @include landscape {
+            @include mxh600mxw900 {
+              font-size: 30px;
+            }
+            @include mxh600mxw750 {
+              font-size: 30px;
+            }
+            @include mxh400mxw750 {
+              font-size: 30px;
+            }
+            @include mxh400mxw600 {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+      .rate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        @include landscape {
+          @include mxh600mxw900 {
+            row-gap: 10px;
+          }
+          @include mxh600mxw750 {
+            row-gap: 10px;
+          }
+          @include mxh400mxw750 {
+            row-gap: 10px;
+          }
+          @include mxh400mxw600 {
+            row-gap: 10px;
+          }
+        }
+        .rateNum {
+          font-size: 150px;
+          line-height: 150px;
+          font-family: "Spectral";
+          font-weight: 700;
+          color: $light;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.65);
+          @include xs {
+            font-size: 80px;
+            line-height: 90px;
+          }
+          @include sm {
+            font-size: 100px;
+            line-height: 100px;
+          }
+          @include smd {
+            font-size: 130px;
+            line-height: 130px;
+          }
+          @include md {
+            font-size: 140px;
+            line-height: 140px;
+          }
+          @include landscape {
+            @include mxh600mxw900 {
+              font-size: 80px;
+              line-height: 85px;
+            }
+            @include mxh600mxw750 {
+              font-size: 80px;
+              line-height: 85px;
+            }
+            @include mxh400mxw750 {
+              font-size: 80px;
+              line-height: 85px;
+            }
+            @include mxh400mxw600 {
+              font-size: 55px;
+              line-height: 60px;
+            }
+          }
+        }
+        .postRate {
+          margin-top: -15px;
+          font-size: 26px;
+          line-height: 26px;
+          font-family: "Spectral";
+          font-weight: 700;
+          color: $light;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.65);
+          @include xs {
+            font-size: 22px;
+            line-height: 22px;
+          }
+          @include sm {
+            font-size: 22px;
+            line-height: 22px;
+          }
+          @include smd {
+            font-size: 22px;
+            line-height: 22px;
+          }
+          @include md {
+            font-size: 24px;
+            line-height: 24px;
+          }
+          @include landscape {
+            @include mxh600mxw900 {
+              font-size: 18px;
+              line-height: 26px;
+            }
+            @include mxh600mxw750 {
+              font-size: 18px;
+              line-height: 26px;
+            }
+            @include mxh400mxw750 {
+              font-size: 18px;
+              line-height: 26px;
+            }
+            @include mxh400mxw600 {
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+      .bottom {
+        //    height: 38%;
+        .quotes {
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-end;
+          .swiper {
+            &:hover {
+              // cursor: ew-resize;
+              cursor: default;
+            }
+            > div {
+              height: 100%;
+              align-items: flex-end;
+            }
+          }
+          .quote {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 5px;
+            cursor: w-resize;
+            .text {
+              font-size: 24px;
+              font-family: "YanoneKaffeesatz";
+              font-weight: 400;
+              line-height: 1.1;
+              color: $light;
+              max-width: 450px;
+              text-align: center;
+              @include xs {
+                font-size: 16px;
+                max-width: 210px;
+              }
+              @include sm {
+                font-size: 18px;
+                max-width: 240px;
+              }
+              @include smd {
+                font-size: 18px;
+                max-width: 400px;
+              }
+              @include md {
+                font-size: 20px;
+                max-width: 600px;
+              }
+              @include landscape {
+                @include mxh600mxw900 {
+                  font-size: 16px;
+                  max-width: 650px;
+                }
+                @include mxh600mxw750 {
+                  font-size: 16px;
+                  max-width: 650px;
+                }
+                @include mxh400mxw750 {
+                  font-size: 16px;
+                  max-width: 650px;
+                }
+                @include mxh400mxw600 {
+                  font-size: 15px;
+                  max-width: 500px;
+                }
+              }
+            }
+            svg {
+              height: 20px;
+              width: auto;
+              @include xs {
+                height: 14px;
+              }
+              @include sm {
+                height: 14px;
+              }
+              @include smd {
+                height: 16px;
+              }
+              @include md {
+                height: 18px;
+              }
+              @include landscape {
+                @include mxh600mxw900 {
+                  height: 12px;
+                }
+                @include mxh600mxw750 {
+                  height: 12px;
+                }
+                @include mxh400mxw750 {
+                  height: 12px;
+                }
+                @include mxh400mxw600 {
+                  height: 10px;
+                }
+              }
+              path {
+                fill: $light;
+              }
+            }
+            .author {
+              text-align: center;
+              font-size: 18px;
+              line-height: 1.1;
+              color: $light;
+              font-family: "YanoneKaffeesatz";
+              font-weight: 300;
+              @include xs {
+                font-size: 14px;
+              }
+              @include sm {
+                font-size: 14px;
+              }
+              @include smd {
+                font-size: 16px;
+              }
+              @include landscape {
+                @include mxh600mxw900 {
+                  font-size: 14px;
+                }
+                @include mxh600mxw750 {
+                  font-size: 14px;
+                }
+                @include mxh400mxw750 {
+                  font-size: 14px;
+                }
+                @include mxh400mxw600 {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,315 @@
+@import "../../responsiveMixins.scss";
+
+.addRate {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+  cursor: default;
+  .wrapper {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    @include xs {
+      max-width: 260px;
+    }
+    @include sm {
+      max-width: 320px;
+    }
+    @include smd {
+      max-width: 480px;
+    }
+    @include md {
+      max-width: 700px;
+    }
+    @include lg {
+      max-width: 700px;
+    }
+    @include xl {
+      max-width: 1000px;
+    }
+    @include xxl {
+      max-width: 1200px;
+    }
+    @include xxxl {
+      max-width: 1400px;
+    }
+    .pageTitle {
+      font-family: "YanoneKaffeesatz";
+      font-weight: 500;
+      font-size: 30px;
+      color: $light;
+      width: 100%;
+      text-align: center;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      width: 100%;
+      .rateInfo {
+        display: flex;
+        align-items: stretch;
+        column-gap: 15px;
+        @include xs {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        @include sm {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        @include smd {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        .title {
+          flex: 1;
+          @include xs {
+            width: 100%;
+          }
+          @include sm {
+            width: 100%;
+          }
+          @include smd {
+            width: 100%;
+          }
+        }
+        .rate {
+          width: 40%;
+          @include xs {
+            width: 100%;
+          }
+          @include sm {
+            width: 100%;
+          }
+          @include smd {
+            width: 100%;
+          }
+        }
+      }
+      .attachment {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 15px;
+        position: relative;
+        @include xs {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        @include sm {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        @include smd {
+          flex-direction: column;
+          row-gap: 15px;
+        }
+        .cardBg {
+          flex: 1;
+          .uploadPhotoComment {
+            font-family: "YanoneKaffeesatz";
+            font-weight: 300;
+            color: $light;
+            font-size: 20px;
+            width: 100%;
+            text-align: left;
+            @include xs {
+              font-size: 16px;
+            }
+            @include sm {
+              font-size: 16px;
+            }
+            @include smd {
+              font-size: 16px;
+            }
+            @include md {
+              font-size: 16px;
+            }
+            @include lg {
+              font-size: 17px;
+            }
+            a {
+              text-decoration: none;
+              color: $white;
+            }
+          }
+        }
+        .quotesBlock {
+          width: 40%;
+          @include xs {
+            width: 100%;
+          }
+          @include sm {
+            width: 100%;
+          }
+          @include smd {
+            width: 100%;
+          }
+          label {
+            color: $light;
+            font-size: 18px;
+            text-align: left;
+            width: 100%;
+          }
+          .quotes {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 7px;
+            .addQuote {
+              width: 100%;
+              height: 40px;
+              border: none;
+              outline: none;
+              padding: 10px 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: "YanoneKaffeesatz";
+              font-weight: 700;
+              background-color: $white;
+              border-radius: 4px;
+              transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+              span {
+                color: $dark;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 18px;
+              }
+              &:hover {
+                cursor: pointer;
+                background: $light;
+                transform: scale(1.02);
+              }
+              &:disabled {
+                opacity: 0.1;
+                cursor: not-allowed;
+              }
+              &:active {
+                transform: scale(0.95);
+              }
+            }
+            .block {
+              display: flex;
+              flex-direction: column;
+              row-gap: 5px;
+              .meta {
+                display: flex;
+                align-items: center;
+                column-gap: 7px;
+                .select {
+                  flex: 1;
+                }
+                .expertItem {
+                  display: flex;
+                  align-items: center;
+                  column-gap: 10px;
+                  img {
+                    border-radius: 4px;
+                  }
+                }
+                .delQuote {
+                  width: 40px;
+                  border: none;
+                  outline: none;
+                  padding: 10px 15px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-family: "YanoneKaffeesatz-SemiBold";
+                  background-color: $red;
+                  border-radius: 4px;
+                  transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+                  span {
+                    color: $white;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    @include xs {
+                      font-size: 16px;
+                    }
+                    @include sm {
+                      font-size: 16px;
+                    }
+                    @include smd {
+                      font-size: 16px;
+                    }
+                    @include md {
+                      font-size: 16px;
+                    }
+                    @include lg {
+                      font-size: 16px;
+                    }
+                  }
+                  &:hover {
+                    cursor: pointer;
+                    background: #f74755;
+                  }
+                  &:disabled {
+                    opacity: 0.1;
+                    cursor: not-allowed;
+                  }
+                  &:active {
+                    transform: scale(0.95);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .submit {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        transition: all 0.33s cubic-bezier(0.215, 0.61, 0.355, 1);
+        span {
+          color: $dark;
+          font-weight: 700;
+          font-family: "YanoneKaffeesatz";
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+          background: $dark;
+          border: 1px solid $light;
+          transform: scale(1.01);
+          span {
+            color: $light;
+          }
+        }
+        &:disabled {
+          opacity: 0.1;
+          cursor: not-allowed;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      .serverError {
+        color: $red;
+        font-size: 20px;
+        width: 100%;
+        padding: 3px 6px;
+        text-align: center;
+        background: $light;
+        border: 1px solid $red;
+        border-radius: 3px;
+      }
+    }
+  }
+}

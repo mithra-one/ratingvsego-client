@@ -1,0 +1,365 @@
+@import "../../responsiveMixins.scss";
+
+.heroWrapper {
+  width: 100%;
+  height: calc(100dvh - 50px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(254, 222, 186, 0.3) 0%,
+    rgba(254, 222, 186, 0.2) 20.83%,
+    rgba(254, 222, 186, 0.15) 39.06%,
+    rgba(254, 222, 186, 0) 100%
+  );
+  .hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    .top {
+      width: 100%;
+      height: 100%;
+      row-gap: 70px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include landscape {
+        @include mxh600mxw750 {
+          row-gap: 65px;
+        }
+        @include mxh400mxw900 {
+          row-gap: 45px;
+        }
+        @include mxh400mxw750 {
+          row-gap: 65px;
+        }
+        @include mxh400mxw600 {
+          row-gap: 65px;
+        }
+      }
+      &:hover {
+        cursor: default;
+      }
+      .line01 {
+        font-family: "YanoneKaffeesatz";
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fedeba;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+        margin-bottom: 30px;
+        @include xs {
+          font-size: 26px;
+          line-height: 26px;
+        }
+        @include sm {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        @include xxl {
+          font-size: 40px;
+          line-height: 40px;
+        }
+        @include xxxl {
+          font-size: 51px;
+          line-height: 51px;
+        }
+        @include landscape {
+          @include mxh600mxw750 {
+            font-size: 27px;
+            line-height: 27px;
+            margin-bottom: 35px;
+          }
+          @include mxh400mxw900 {
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 50px;
+          }
+          @include mxh400mxw750 {
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 35px;
+          }
+          @include mxh400mxw600 {
+            font-size: 19px;
+            line-height: 19px;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .line02 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        margin-top: -75px;
+        .rating {
+          font-family: "Santa Catarina";
+          font-size: 162px;
+          line-height: 162px;
+          color: #fedeba;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+          text-transform: uppercase;
+          @include xs {
+            font-size: 100px;
+            line-height: 100px;
+          }
+          @include sm {
+            font-size: 120px;
+            line-height: 120px;
+          }
+          @include xxl {
+            font-size: 162px;
+            line-height: 162px;
+          }
+          @include xxxl {
+            font-size: 210px;
+            line-height: 210px;
+          }
+          @include landscape {
+            @include mxh600mxw750 {
+              font-size: 110px;
+              line-height: 110px;
+            }
+            @include mxh400mxw900 {
+              font-size: 96px;
+              line-height: 96px;
+            }
+            @include mxh400mxw750 {
+              font-size: 96px;
+              line-height: 96px;
+            }
+            @include mxh400mxw600 {
+              font-size: 80px;
+              line-height: 80px;
+            }
+          }
+        }
+        .vsego {
+          transform: rotate(-4deg);
+          position: absolute;
+          bottom: -65px;
+          font-family: "Rozovii Chulok";
+          font-size: 116px;
+          line-height: 116px;
+          color: #fedeba;
+          text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+          @include xs {
+            bottom: -35px;
+            font-size: 60px;
+            line-height: 60px;
+          }
+          @include sm {
+            bottom: -35px;
+            font-size: 80px;
+            line-height: 80px;
+          }
+          @include smd {
+            bottom: -40px;
+          }
+          @include md {
+            bottom: -40px;
+          }
+          @include lg {
+            bottom: -50px;
+          }
+          @include xxl {
+            bottom: -30px;
+            font-size: 116px;
+            line-height: 116px;
+          }
+          @include xxxl {
+            bottom: -65px;
+            font-size: 150px;
+            line-height: 150px;
+          }
+          @include landscape {
+            @include mxh600mxw750 {
+              bottom: -30px;
+              font-size: 75px;
+              line-height: 75px;
+            }
+            @include mxh400mxw900 {
+              bottom: -30px;
+              font-size: 70px;
+              line-height: 70px;
+            }
+            @include mxh400mxw750 {
+              bottom: -30px;
+              font-size: 70px;
+              line-height: 70px;
+            }
+            @include mxh400mxw600 {
+              bottom: -30px;
+              font-size: 55px;
+              line-height: 55px;
+            }
+          }
+        }
+      }
+      .line03 {
+        font-family: "YanoneKaffeesatz";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 38px;
+        line-height: 38px;
+        color: #fedeba;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+        margin-top: -25px;
+        @include xs {
+          font-size: 22px;
+          line-height: 22px;
+        }
+        @include sm {
+          font-size: 28px;
+          line-height: 28px;
+        }
+        @include lg {
+          margin-top: -5px;
+        }
+        @include xxl {
+          font-size: 38px;
+          line-height: 38px;
+        }
+        @include xxxl {
+          margin-top: -7px;
+          font-size: 50px;
+          line-height: 50px;
+        }
+        @include landscape {
+          @include mxh600mxw750 {
+            font-size: 26px;
+            line-height: 26px;
+          }
+          @include mxh400mxw900 {
+            font-size: 26px;
+            line-height: 26px;
+          }
+          @include mxh400mxw900 {
+            font-size: 22px;
+            line-height: 22px;
+          }
+          @include mxh400mxw750 {
+            font-size: 22px;
+            line-height: 22px;
+          }
+          @include mxh400mxw600 {
+            font-size: 18px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 35px;
+      display: flex;
+      flex-direction: column;
+      row-gap: -5px;
+      @include landscape {
+        @include mxh600mxw750 {
+          bottom: 5px;
+        }
+        @include mxh400mxw900 {
+          bottom: 5px;
+        }
+        @include mxh400mxw900 {
+          bottom: 5px;
+        }
+        @include mxh400mxw750 {
+          bottom: 5px;
+        }
+        @include mxh400mxw600 {
+          bottom: 5px;
+        }
+      }
+      > div {
+        &:nth-child(1) {
+          margin-bottom: -5px;
+        }
+        &:nth-child(3) {
+          margin-top: -5px;
+        }
+        svg {
+          width: 30px;
+          height: auto;
+          @include xs {
+            width: 20px;
+          }
+          @include landscape {
+            @include mxh600mxw750 {
+              width: 20px;
+            }
+            @include mxh400mxw900 {
+              width: 20px;
+            }
+            @include mxh400mxw900 {
+              width: 20px;
+            }
+            @include mxh400mxw750 {
+              width: 20px;
+            }
+            @include mxh400mxw600 {
+              width: 20px;
+            }
+          }
+          path {
+            fill: $light;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

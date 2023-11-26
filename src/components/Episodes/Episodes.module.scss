@@ -1,0 +1,245 @@
+@import "../../responsiveMixins.scss";
+
+.episodes {
+  padding-top: 70px;
+  margin-bottom: 35px;
+  cursor: default;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  @include xs {
+    max-width: 260px;
+  }
+  @include sm {
+    max-width: 320px;
+  }
+  @include smd {
+    max-width: 480px;
+  }
+  @include md {
+    max-width: 700px;
+  }
+  @include lg {
+    max-width: 700px;
+  }
+  @include xl {
+    max-width: 1000px;
+  }
+  @include xxl {
+    max-width: 1200px;
+  }
+  @include xxxl {
+    max-width: 1400px;
+  }
+  .list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 60px;
+    padding-left: 0;
+    margin-bottom: 30px;
+    @include xs {
+      flex-direction: column;
+      row-gap: 15px;
+      margin-bottom: 15px;
+    }
+    @include sm {
+      flex-direction: column;
+      row-gap: 15px;
+      margin-bottom: 15px;
+    }
+    @include smd {
+      column-gap: 30px;
+      margin-bottom: 25px;
+    }
+    @include md {
+      column-gap: 35px;
+      margin-bottom: 25px;
+    }
+    @include lg {
+      column-gap: 35px;
+      margin-bottom: 25px;
+    }
+    .card {
+      transition: all 0.33s cubic-bezier(0.39, 0.575, 0.565, 1);
+      @include xs {
+        width: 260px;
+      }
+      @include sm {
+        width: 320px;
+      }
+      @include smd {
+        width: 140px;
+      }
+      @include md {
+        width: 210px;
+      }
+      @include lg {
+        width: 276px;
+      }
+      @include xl {
+        width: 293px;
+      }
+      @include xxl {
+        width: 360px;
+      }
+      @include xxxl {
+        width: 427px;
+      }
+      &:hover {
+        transform: scale(1.03);
+        img {
+          box-shadow: 0px 0px 20px -5px rgba(254, 222, 186, 0.75);
+          border: 1px solid $light;
+        }
+      }
+      &:active {
+        transform: scale(0.99);
+      }
+      a {
+        text-decoration: none;
+        color: $light;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 4px;
+          transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+          border: 1px solid $regular;
+        }
+        h3 {
+          font-size: 22px;
+          line-height: 24px;
+          font-weight: 300;
+          font-family: "YanoneKaffeesatz";
+          text-transform: uppercase;
+          width: 100%;
+          @include xs {
+            font-size: 16px;
+            line-height: 18px;
+          }
+          @include sm {
+            font-size: 18px;
+            line-height: 20px;
+          }
+          @include smd {
+            font-size: 14px;
+            line-height: 16px;
+          }
+          @include md {
+            font-size: 14px;
+            line-height: 16px;
+          }
+          @include lg {
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .youtubeButton {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    text-decoration: none;
+    font-family: "YanoneKaffeesatz";
+    font-weight: 700;
+    color: $light;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid rgba(254, 222, 186, 0.3);
+    background: rgba(254, 222, 186, 0.07);
+    width: calc((100% - 120px) / 3);
+    margin: 0 auto;
+    padding: 5px 7px 4px;
+    cursor: pointer;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include xs {
+      width: 260px;
+    }
+    @include sm {
+      width: 320px;
+    }
+    @include smd {
+      width: 100%;
+    }
+    @include md {
+      width: 210px;
+    }
+    @include lg {
+      width: calc((100% / 3) - 20px);
+    }
+    @include xl {
+      width: 293px;
+    }
+    @include xxl {
+      width: 360px;
+    }
+    @include xxxl {
+      width: 427px;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      background: rgba(255, 255, 255, 0.05);
+      &:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      span {
+        color: rgba(254, 222, 186, 0.55);
+      }
+    }
+    &:hover {
+      transform: scale(1.02);
+      background: #fedeba90;
+      box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+      -webkit-box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+      -moz-box-shadow: 0px 0px 20px -4px rgba(254, 222, 186, 0.4);
+      svg {
+        path {
+          fill: $dark;
+        }
+      }
+      span {
+        color: $dark;
+      }
+    }
+    &:active {
+      transform: scale(0.98);
+      border: 0.5px solid $light;
+    }
+    svg {
+      height: 16px;
+      width: auto;
+      transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+      margin-top: -4px;
+      path {
+        fill: $light;
+      }
+    }
+    span {
+      color: $light;
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+  }
+
+  .serverError {
+    color: $red;
+    font-size: 20px;
+    width: 100%;
+    padding: 3px 6px;
+    text-align: center;
+    background: $light;
+    border: 1px solid $red;
+    border-radius: 3px;
+  }
+}

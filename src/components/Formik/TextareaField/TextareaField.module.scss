@@ -1,0 +1,26 @@
+@import "../../../responsiveMixins.scss";
+
+.textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid $regular;
+  background-color: $white;
+  font-family: "YanoneKaffeesatz";
+  font-weight: 500;
+  border-radius: 4px;
+  outline: none;
+  color: $dark;
+  font-size: 26px;
+  &:focus {
+    outline-color: $dark;
+  }
+  &:active {
+    outline-color: $dark;
+  }
+  &::placeholder {
+    font-family: "YanoneKaffeesatz";
+    font-weight: 300;
+    color: $regular;
+    font-size: 26px;
+  }
+}

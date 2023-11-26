@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /register
+Disallow: /profile
+Disallow: /add-event
+Disallow: /add-rate
+Disallow: /add-expert
+Disallow: /edit-event
+Disallow: /edit-rate
+Disallow: /edit-expert

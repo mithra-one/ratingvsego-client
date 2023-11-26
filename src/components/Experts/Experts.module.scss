@@ -1,0 +1,107 @@
+@import "../../responsiveMixins.scss";
+
+.experts {
+  cursor: default;
+  width: 100%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+  @include xs {
+    row-gap: 15px;
+  }
+  @include sm {
+    row-gap: 20px;
+  }
+  @include smd {
+    row-gap: 25px;
+  }
+  @include md {
+    row-gap: 30px;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+    font-family: "YanoneKaffeesatz";
+    font-weight: 300;
+    font-size: 34px;
+    color: $light;
+    text-transform: uppercase;
+    @include xs {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+    @include smd {
+      font-size: 26px;
+    }
+    @include md {
+      font-size: 28px;
+    }
+  }
+  .list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 35px;
+    column-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    // background: radial-gradient(
+    //   50% 50% at 50% 50%,
+    //   rgba(254, 222, 186, 0.2) 0%,
+    //   rgba(254, 222, 186, 0.15) 20.83%,
+    //   rgba(254, 222, 186, 0.05) 39.06%,
+    //   rgba(254, 222, 186, 0) 100%
+    // );
+    @include xs {
+      max-width: 260px;
+      row-gap: 27px;
+      column-gap: 27px;
+    }
+    @include sm {
+      max-width: 320px;
+      row-gap: 20px;
+      column-gap: 20px;
+    }
+    @include smd {
+      max-width: 480px;
+      row-gap: 25px;
+      column-gap: 25px;
+    }
+    @include md {
+      max-width: 700px;
+      row-gap: 30px;
+      column-gap: 30px;
+    }
+    @include lg {
+      max-width: 700px;
+      row-gap: 33px;
+      column-gap: 33px;
+    }
+    @include xl {
+      max-width: 1000px;
+      row-gap: 28px;
+      column-gap: 28px;
+    }
+    @include xxl {
+      max-width: 1200px;
+    }
+    @include xxxl {
+      max-width: 1400px;
+    }
+  }
+}
+
+.serverError {
+  color: $red;
+  font-size: 20px;
+  width: 100%;
+  padding: 3px 6px;
+  text-align: center;
+  background: $light;
+  border: 1px solid $red;
+  border-radius: 3px;
+}
