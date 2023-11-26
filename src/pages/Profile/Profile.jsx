@@ -122,15 +122,19 @@ const Profile = () => {
               <button
                 type="submit"
                 className={s.submit}
-                disabled={
-                  (formikProps.touched.username &&
-                    formikProps.errors.username) ||
-                  (formikProps.touched.password &&
-                    formikProps.errors.password) ||
-                  isFetching
-                }
+                // disabled={
+                //   (formikProps.touched.username &&
+                //     formikProps.errors.username) ||
+                //   (formikProps.touched.password &&
+                //     formikProps.errors.password) ||
+                //   isFetching
+                // }
+                disabled
               >
-                <span>{isFetching ? "Загрузка..." : "Сохранить"}</span>
+                <span>
+                  {/* {isFetching ? "Загрузка..." : "Сохранить"} */}
+                  Нельзя изменить профиль в демо режиме
+                </span>
               </button>
               {error && <div className={s.serverError}>{error}</div>}
               {updateSuccess && (

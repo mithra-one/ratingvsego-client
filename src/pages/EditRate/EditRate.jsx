@@ -320,10 +320,12 @@ const EditRate = () => {
                 <button
                   type="submit"
                   className={s.submit}
-                  disabled={isFetching}
+                  // disabled={isFetching}
+                  disabled
                 >
                   <span>
-                    {isFetching ? "Сохранение..." : "Сохранить оценку"}
+                    {/* {isFetching ? "Сохранение..." : "Сохранить оценку"} */}
+                    Нельзя изменить позицию рейтинга в демо режиме
                   </span>
                 </button>
                 {error && <div className={s.serverError}>{error}</div>}

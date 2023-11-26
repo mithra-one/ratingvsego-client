@@ -50,23 +50,24 @@ const RatingItem = ({ item }) => {
   const handleDelete = async (e, rateID) => {
     e.stopPropagation();
     e.preventDefault();
-    if (window.confirm(`Вы хотите удалить ${item.title} из рейтинга?`)) {
-      try {
-        FetchStart();
-        const res = await fetch(`/api/rate/delete/${rateID}`, {
-          method: "DELETE",
-        });
-        const data = await res.json();
-        if (data.success === false) {
-          FetchFailure(data.message);
-          return;
-        }
-        FetchSuccess();
-        navigate(0);
-      } catch (err) {
-        FetchFailure(err);
-      }
-    }
+    // if (window.confirm(`Вы хотите удалить ${item.title} из рейтинга?`)) {
+    //   try {
+    //     FetchStart();
+    //     const res = await fetch(`/api/rate/delete/${rateID}`, {
+    //       method: "DELETE",
+    //     });
+    //     const data = await res.json();
+    //     if (data.success === false) {
+    //       FetchFailure(data.message);
+    //       return;
+    //     }
+    //     FetchSuccess();
+    //     navigate(0);
+    //   } catch (err) {
+    //     FetchFailure(err);
+    //   }
+    // }
+    alert("Нельзя удалить оценку в демо-режиме");
   };
 
   return (

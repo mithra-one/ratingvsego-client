@@ -147,10 +147,12 @@ const EditExpert = () => {
                 <button
                   type="submit"
                   className={s.submit}
-                  disabled={isFetching}
+                  // disabled={isFetching}
+                  disabled
                 >
                   <span>
-                    {isFetching ? "Сохранение..." : "Сохранить эксперта"}
+                    {/* {isFetching ? "Сохранение..." : "Сохранить эксперта"} */}
+                    Нельзя изменить эксперта в демо режиме
                   </span>
                 </button>
                 {error && <div className={s.serverError}>{error}</div>}

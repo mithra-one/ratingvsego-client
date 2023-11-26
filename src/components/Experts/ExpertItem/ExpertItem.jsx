@@ -33,25 +33,26 @@ const ExpertItem = ({ expert }) => {
     e.stopPropagation();
     e.preventDefault();
 
-    if (
-      window.confirm(`Вы хотите удалить ${expert.name} из списка экспертов?`)
-    ) {
-      try {
-        FetchStart();
-        const res = await fetch(`/api/expert/delete/${expertID}`, {
-          method: "DELETE",
-        });
-        const data = await res.json();
-        if (data.success === false) {
-          FetchFailure(data.message);
-          return;
-        }
-        FetchSuccess();
-        navigate(0);
-      } catch (err) {
-        FetchFailure(err);
-      }
-    }
+    // if (
+    //   window.confirm(`Вы хотите удалить ${expert.name} из списка экспертов?`)
+    // ) {
+    //   try {
+    //     FetchStart();
+    //     const res = await fetch(`/api/expert/delete/${expertID}`, {
+    //       method: "DELETE",
+    //     });
+    //     const data = await res.json();
+    //     if (data.success === false) {
+    //       FetchFailure(data.message);
+    //       return;
+    //     }
+    //     FetchSuccess();
+    //     navigate(0);
+    //   } catch (err) {
+    //     FetchFailure(err);
+    //   }
+    // }
+    alert("Нельзя удалить эксперта в демо-режиме");
   };
 
   return (

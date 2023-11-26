@@ -271,8 +271,16 @@ const AddRate = () => {
                 </div>
               </div>
 
-              <button type="submit" className={s.submit} disabled={isFetching}>
-                <span>{isFetching ? "Сохранение..." : "Добавить оценку"}</span>
+              <button
+                type="submit"
+                className={s.submit}
+                // disabled={isFetching}
+                disabled
+              >
+                <span>
+                  {/* {isFetching ? "Сохранение..." : "Добавить оценку"} */}
+                  Нельзя добавить позицию рейтинга в демо режиме
+                </span>
               </button>
               {error && <div className={s.serverError}>{error}</div>}
             </Form>

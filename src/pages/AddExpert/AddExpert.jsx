@@ -102,9 +102,15 @@ const AddExpert = () => {
                   </div>
                 </div>
               </div>
-              <button type="submit" className={s.submit} disabled={isFetching}>
+              <button
+                type="submit"
+                className={s.submit}
+                // disabled={isFetching}
+                disabled
+              >
                 <span>
-                  {isFetching ? "Сохранение..." : "Добавить эксперта"}
+                  {/* {isFetching ? "Сохранение..." : "Добавить эксперта"} */}
+                  Нельзя добавить эксперта в демо режиме
                 </span>
               </button>
               {error && <div className={s.serverError}>{error}</div>}

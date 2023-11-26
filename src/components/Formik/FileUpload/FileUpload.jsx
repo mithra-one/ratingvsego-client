@@ -229,7 +229,7 @@ const FileUpload = ({
                   >
                     <ResetIcon /> <span>Сбросить</span>
                   </button>
-                  <button
+                  {/* <button
                     type="button"
                     className={s.uploadImage}
                     onClick={serverUpload}
@@ -242,6 +242,25 @@ const FileUpload = ({
                         <UploadIcon /> <span>Загрузить</span>
                       </>
                     )}
+                  </button> */}
+                  <label
+                    style={{
+                      width: "100%",
+                      textAlign: "center",
+                      color: "#fedeba",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Демо сервер работает в режиме read-only, загрузка невозможна
+                  </label>
+                  <button
+                    type="button"
+                    className={s.clearImage}
+                    onClick={() => {
+                      toggleModal();
+                    }}
+                  >
+                    <span>Закрыть</span>
                   </button>
                 </div>
               )}
